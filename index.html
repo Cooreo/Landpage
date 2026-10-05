@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151b19">
+  <meta name="description" content="Reports, research, and projects by F.W., including ZenithEngine and a small browser chess demo.">
+  <title>Reports &amp; Projects by F.W. — Research, in context</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" defer></script>
+  <script src="reports.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="chess-demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header-shell" id="top">
+    <div class="site-header page-wrap">
+      <a class="brand" href="#top" aria-label="F.W. Reports, back to top">
+        <span class="brand-mark" aria-hidden="true">f<span>/</span>w</span>
+        <span class="brand-copy">
+          <strong>REPORTS</strong>
+          <span>Research, in context</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#reports">The archive <span class="nav-count" id="nav-report-count">00</span></a>
+        <a href="#projects">Projects</a>
+        <a href="#approach">My approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn ambient sound on">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="sound-label">Sound off</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero-shell">
+      <div class="hero-glow hero-glow--one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--two" aria-hidden="true"></div>
+      <section class="hero page-wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--light"><span class="status-dot" aria-hidden="true"></span> A PERSONAL REPORT LIBRARY</p>
+          <h1 id="hero-title">Every report has<br>a story <em>behind it.</em></h1>
+          <p class="hero-intro">A home for my reports, with the questions, context, and takeaways that make each one worth a closer look.</p>
+          <div class="hero-actions">
+            <a class="button button--lime" href="#reports">Explore the archive <span aria-hidden="true">↘</span></a>
+            <a class="text-link text-link--light" href="mailto:fwepic01@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-footnote">
+            <span>INDEPENDENT WORK · SHARED WITH CARE</span>
+            <span class="scroll-note"><span class="scroll-line" aria-hidden="true"></span> SCROLL TO EXPLORE</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-topline"><span>OBSERVE / CONNECT / SHARE</span><span>FW—01</span></div>
+          <svg class="orbit-art" viewBox="0 0 560 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(294 236) rotate(90) scale(184)">
+                <stop stop-color="#D4F58B" stop-opacity=".3"/>
+                <stop offset="1" stop-color="#D4F58B" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="orbitLine" x1="106" y1="84" x2="460" y2="401" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D7F79B" stop-opacity=".1"/>
+                <stop offset=".5" stop-color="#D7F79B" stop-opacity=".68"/>
+                <stop offset="1" stop-color="#D7F79B" stop-opacity=".11"/>
+              </linearGradient>
+              <linearGradient id="orbFill" x1="224" y1="169" x2="367" y2="324" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E2F5B0"/>
+                <stop offset=".52" stop-color="#9BCB78"/>
+                <stop offset="1" stop-color="#476850"/>
+              </linearGradient>
+              <filter id="softBlur" x="120" y="60" width="350" height="350" filterUnits="userSpaceOnUse">
+                <feGaussianBlur stdDeviation="24"/>
+              </filter>
+            </defs>
+            <circle cx="294" cy="236" r="180" fill="url(#coreGlow)"/>
+            <ellipse cx="294" cy="238" rx="207" ry="76" transform="rotate(-31 294 238)" stroke="url(#orbitLine)" stroke-width="1.1"/>
+            <ellipse cx="294" cy="238" rx="207" ry="76" transform="rotate(38 294 238)" stroke="#D7F79B" stroke-opacity=".24" stroke-width="1"/>
+            <ellipse cx="294" cy="238" rx="144" ry="208" transform="rotate(11 294 238)" stroke="#D7F79B" stroke-opacity=".18" stroke-width="1" stroke-dasharray="3 8"/>
+            <path d="M72 327C153 307 186 208 260 157C316 118 394 140 472 79" stroke="#D7F79B" stroke-opacity=".38" stroke-width="1" stroke-dasharray="2 7"/>
+            <path d="M91 144C150 202 178 343 264 372C341 398 407 337 480 351" stroke="#D7F79B" stroke-opacity=".26" stroke-width="1"/>
+            <circle cx="292" cy="239" r="113" fill="#D2F29A" fill-opacity=".15" filter="url(#softBlur)"/>
+            <circle cx="292" cy="239" r="74" fill="url(#orbFill)"/>
+            <circle cx="292" cy="239" r="73.5" stroke="#EAF8CB" stroke-opacity=".67"/>
+            <path d="M237 261C257 233 282 224 311 214C331 207 345 192 352 179" stroke="#F1F9DC" stroke-opacity=".72" stroke-width="1.2"/>
+            <path d="M238 263C259 280 285 293 313 293C328 293 341 287 351 278" stroke="#365B43" stroke-opacity=".42" stroke-width="1.2"/>
+            <circle cx="352" cy="179" r="4" fill="#EFFBBF"/>
+            <circle cx="238" cy="263" r="3" fill="#EFFBBF"/>
+            <circle cx="415" cy="139" r="4" fill="#D7F79B"/>
+            <circle cx="162" cy="361" r="3" fill="#D7F79B"/>
+            <circle cx="439" cy="305" r="2.5" fill="#F6E5B4"/>
+            <path d="M294 130V347M184 239H400" stroke="#FCF8EA" stroke-opacity=".11" stroke-width="1"/>
+            <circle cx="292" cy="239" r="4" fill="#F9FFEA"/>
+          </svg>
+          <div class="visual-label visual-label--left"><span>01</span><span>CONTEXT</span></div>
+          <div class="visual-label visual-label--right"><span>02</span><span>CLARITY</span></div>
+          <div class="visual-label visual-label--bottom"><span>03</span><span>WHAT MATTERS NEXT</span></div>
+          <div class="visual-caption"><span class="caption-mark">✳</span><span>Look closer.<br>See the connections.</span></div>
+        </div>
+      </section>
+    </div>
+
+  <section class="archive-section" id="reports" aria-labelledby="archive-title">
+    <div class="page-wrap">
+      <div class="section-heading archive-heading">
+        <div>
+          <p class="eyebrow"><span class="section-index">01</span> THE ARCHIVE</p>
+          <h2 id="archive-title">Reports, with<br><em>the why included.</em></h2>
+          <p class="section-intro">Browse the work by subject, then open a report for the full picture. Each entry includes a little more of the thinking behind it.</p>
+        </div>
+        <div class="archive-count-wrap" aria-live="polite">
+          <span class="archive-count" id="archive-count">00</span>
+          <span class="archive-count-label" id="archive-count-label">reports in the library</span>
+        </div>
+      </div>
+
+      <div class="archive-toolbar" id="archive-toolbar" hidden>
+        <label class="search-box" for="report-search">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8" stroke="currentColor" stroke-width="1.5"/><path d="m13.2 13.2 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input id="report-search" type="search" placeholder="Search reports" autocomplete="off">
+          <span class="sr-only">Search report titles, topics, and descriptions</span>
+        </label>
+        <label class="select-wrap">
+          <span class="sr-only">Filter by category</span>
+          <select id="category-filter" aria-label="Filter by category">
+            <option value="all">All subjects</option>
+          </select>
+          <span class="select-chevron" aria-hidden="true">⌄</span>
+        </label>
+        <label class="select-wrap select-wrap--sort">
+          <span class="sr-only">Sort reports</span>
+          <select id="sort-order" aria-label="Sort reports">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="title">Title A–Z</option>
+          </select>
+          <span class="select-chevron" aria-hidden="true">⌄</span>
+        </label>
+      </div>
+
+      <div class="report-grid" id="report-grid" aria-live="polite" aria-relevant="additions text"></div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="empty-index" aria-hidden="true"><span>FW</span><i></i><i></i><i></i></div>
+        <div class="empty-copy">
+          <p class="eyebrow"><span class="section-index">A NOTE</span> THE SHELF IS READY</p>
+          <h3>The first report<br>is still to come.</h3>
+          <p>There aren't any reports published here just yet. In the meantime, I'd love to hear what you'd like to read—or help you find your way to the work.</p>
+          <a class="text-link" href="mailto:fwepic01@gmail.com?subject=Reports%20and%20research">Get in touch <span aria-hidden="true">↗</span></a>
+          <p class="owner-note">Site owner? Add report details in <code>reports.js</code> and place your files in <code>reports/</code>.</p>
+        </div>
+      </div>
+
+      <p class="no-results" id="no-results" hidden>No reports match that search. Try a different title, topic, or category.</p>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects" aria-labelledby="projects-title">
+    <div class="page-wrap">
+      <div class="project-section-heading">
+        <div>
+          <p class="eyebrow"><span class="section-index">02</span> PROJECT SPOTLIGHT</p>
+          <h2 id="projects-title">Built together.<br><em>Play a move.</em></h2>
+        </div>
+        <p>A peek at something made beyond the report archive: a small C++ chess-engine project and a quick browser demo to try the board.</p>
+      </div>
+
+      <div class="project-feature">
+        <article class="engine-card" aria-labelledby="zenith-title">
+          <div class="engine-card-top"><span>COLLABORATIVE BUILD</span><span class="engine-language">C++</span></div>
+          <div class="engine-emblem" aria-hidden="true"><span>ZE</span><i></i><i></i><i></i></div>
+          <p class="eyebrow eyebrow--light"><span class="status-dot" aria-hidden="true"></span> CHESS ENGINE · PASSION PROJECT</p>
+          <h3 id="zenith-title">ZenithEngine</h3>
+          <p class="engine-summary">A chess engine we're building in C++ with friends, with a simple GUI in mind and plenty of room to experiment as we go.</p>
+          <div class="engine-tags"><span>C++</span><span>Built with friends</span><span>In progress</span></div>
+          <div class="engine-card-actions">
+            <a href="https://github.com/Cooreo/ZenithEngine" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+            <a href="#chess-demo">Try the mini demo <span aria-hidden="true">↘</span></a>
+          </div>
+          <p class="engine-footnote">A collaborative side project, made for the joy of building and playing.</p>
+        </article>
+
+        <section class="chess-demo" id="chess-demo" aria-labelledby="chess-demo-title">
+          <div class="chess-demo-header">
+            <div>
+              <p class="eyebrow"><span class="section-index">PLAY / 01</span> A QUICK MATCH</p>
+              <h3 id="chess-demo-title">Your move.</h3>
+            </div>
+            <span class="engine-badge"><i aria-hidden="true"></i> RANDOM BOT</span>
+          </div>
+          <p class="chess-demo-intro">You play White. Make a move, then the browser bot picks a random legal reply.</p>
+
+          <div class="chess-demo-layout">
+            <div class="board-column">
+              <div class="chess-board" id="chess-board" role="group" aria-label="Chessboard. You play the white pieces."></div>
+              <div class="board-caption"><span>YOU · WHITE</span><span>8 × 8 / CHESS.JS</span></div>
+            </div>
+            <aside class="game-sidebar" aria-label="Chess game controls and status">
+              <div class="game-status-card">
+                <span class="turn-indicator" id="turn-indicator" aria-hidden="true"></span>
+                <div class="turn-copy"><span id="turn-label">YOUR MOVE</span><p id="chess-status" role="status" aria-live="polite">Loading chess rules…</p></div>
+              </div>
+              <div class="game-buttons">
+                <button class="game-button game-button--primary" id="new-game" type="button">New game <span aria-hidden="true">↻</span></button>
+                <button class="game-button" id="undo-turn" type="button" disabled>Undo turn <span aria-hidden="true">↶</span></button>
+              </div>
+              <div class="move-history">
+                <p class="eyebrow"><span class="section-index">RECENT</span> MOVE HISTORY</p>
+                <ol class="move-list" id="move-list" aria-live="polite"><li class="opening-note">Opening position</li></ol>
+              </div>
+              <p class="board-instructions" id="board-instructions">Pick a white piece, then choose a highlighted square. Use arrow keys to move focus.</p>
+            </aside>
+          </div>
+
+          <div class="demo-disclaimer"><span aria-hidden="true">✳</span> Standalone browser demo — not connected to ZenithEngine's C++ code yet.</div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach-section" id="approach" aria-labelledby="approach-title">
+    <div class="page-wrap approach-layout">
+      <div class="approach-heading">
+        <p class="eyebrow eyebrow--light"><span class="section-index section-index--light">03</span> MY APPROACH</p>
+        <h2 id="approach-title">Good research<br>should <em>go somewhere.</em></h2>
+      </div>
+      <div class="approach-copy">
+        <p class="approach-lead">Reports can be more than a collection of facts. The best ones connect the evidence to the real questions people are trying to answer.</p>
+        <p>This archive is built to keep each piece in context: what sparked it, what emerged, and what might be worth exploring next. Take what is useful, follow the source, and get in touch if a thread catches your attention.</p>
+        <div class="approach-principles">
+          <div><span>01</span><strong>Start with a question</strong></div>
+          <div><span>02</span><strong>Make the context visible</strong></div>
+          <div><span>03</span><strong>Leave room for curiosity</strong></div>
+        </div>
+      </div>
+      <div class="approach-decoration" aria-hidden="true"><span></span><span></span><span></span><span></span><b>F·W</b></div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="page-wrap">
+      <div class="contact-card">
+        <div class="contact-orb" aria-hidden="true"></div>
+        <div class="contact-content">
+          <p class="eyebrow"><span class="section-index">04</span> SAY HELLO</p>
+          <h2 id="contact-title">Have a question<br>or a thread to pull?</h2>
+          <p>I'd be glad to hear what resonated, what you're working on, or what you'd like to see explored next.</p>
+          <div class="contact-actions">
+            <a class="email-link" href="mailto:fwepic01@gmail.com">fwepic01@gmail.com <span aria-hidden="true">↗</span></a>
+            <button class="copy-email" id="copy-email" type="button" aria-label="Copy email address to clipboard">Copy email</button>
+          </div>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <div class="contact-side-note" aria-hidden="true"><span>OPEN FOR<br>GOOD QUESTIONS</span><span class="side-arrow">↗</span></div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer page-wrap">
+    <a class="footer-brand" href="#top">f<span>/</span>w <span>REPORTS</span></a>
+    <span class="footer-note">A quietly growing library of ideas.</span>
+    <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <div class="sr-only" id="sound-status" role="status" aria-live="polite">Ambient sound is off.</div>
+</body>
+</html>
