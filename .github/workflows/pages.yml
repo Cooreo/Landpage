@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - arena/01a10b12-landpage
+      - main
   workflow_dispatch:
 
 permissions:

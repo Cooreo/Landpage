@@ -46,7 +46,7 @@ Sound is opt-in: a visitor can turn on the soft, slowly changing synth pad with 
 
 ## Publish
 
-GitHub Pages is deployed by the workflow in `.github/workflows/pages.yml` whenever the Arena working branch is updated. The workflow uploads this static site directly; there is no build step.
+GitHub Pages is deployed by the workflow in `.github/workflows/pages.yml` whenever `main` is updated. The workflow uploads this static site directly; there is no build step. The repository's Pages environment currently only allows deployments from `main`.
 
 ## Contact
 
